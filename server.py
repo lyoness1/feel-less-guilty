@@ -2,7 +2,7 @@
 from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, flash, redirect, session, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
-from datetime import datetime
+from datetime import datetime, time
 from yelpapi import YelpAPI 
 from pprint import pprint
 import os 
@@ -24,8 +24,8 @@ app.jinja_env.undefined = StrictUndefined
 def index():
 	"""Render homepage plus search field for location."""
 
-	# Monday=0, Sunday=6
-	today = datetime.today().weekday()
+	# capitalized day of the week in plain English
+	today = datetime.today().strftime('%A')
 
 	return render_template("homepage.html",
 						   today=today)
