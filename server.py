@@ -45,6 +45,7 @@ def search_process():
 	return render_template("search_results.html",
 						   location=location,
 						   radius=radius,
+						   term=term,
 						   yelp_result=yelp_result)
 
 
