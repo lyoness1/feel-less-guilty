@@ -10,116 +10,86 @@
 </head>
 
 <body class="home">
-    <div class="container" style="background-image:url(static/img/bridgebokeh.jpg);background-size:100%; top right no-repeat; background-attachment:fixed; opacity:0.95; filter:Alpha(opacity=80);">
-            <div class="search">
-                 <script>
-                   $(function() {
-                      var locations = [
-                       "Amsterdam",
-                       "Barcelona",
-                       "San Francisco",
-                       "Oakland",
-                       "Napa",
-                       "Chicago",
-                       "Sydney",
-                       "New York",
-                       "California",
-                       "Miami",
-                       "Berkeley",
-                       "Boston",
-                       "Paris",
-                       "Berlin",
-                       "Los Angeles",
-                       "San Diego",
-                       "Austin",
-                       "Portland",
-                       "Seattle",
-                       "Salem",
-                       "Rome",
-                       "Italy",
-                       "New Orleans",
-                       "Madrid",
-                       "Cape Town"
-                      ];
-                        $( "#location" ).autocomplete({
-                         minLength:3,
-                        delay: 400,
-                       source: locations
-                    });
-                 });
-              </script>
-         
-
-      
+  <div class="container" style="background-image:url(static/img/bridgebokeh.jpg);background-size:100%; top right no-repeat; background-attachment:fixed; opacity:0.95; filter:Alpha(opacity=80);">
+    
+    <div class="search">
+                 
       <div class="vertical-align">
         <div class="container">
-              <div class="main-title">
-             <!--    <header> -->
-                <h1 id="main-title">Less Guilt</h1>
-              <!-- </header> -->
-                  <p class="tag">walk and eat every day of the week.</p>
-                    <div class="row">
-                        <div class="input-style-1 ">
-                          <form action="/process_search" method="GET">
-                            <div class="info-parent">
-                              <div class="info-holder">
+          <div class="main-title">
 
-                              
-                                    <input style="color:black; opacity: 0.7;" type="text" id="location" name="location" required placeholder="Enter a location:">
-                                    <form action="/process_search">
+            <!--    <header> -->
+            <h1 id="main-title">Less Guilt</h1>
+            <!-- </header> -->
+
+              <p class="tag">walk and eat every day of the week.</p>
+              <div class="row">
+                <div class="input-style-1 ">
+
+                  <!-- FORM -->
+                  <form action="/process_search" method="GET">
+                    <div class="info-parent">
+                      <div class="info-holder">
+
+                        <input style="color:black; opacity: 0.7;" type="text" id="location" name="location" required placeholder="Enter a location:">
+
+                          <form action="/process_search">
 `                                     
-                                      Pick an adventure:
-                                      {% if today == 0 %}
-                                      <select name="term">
-                                          <option value="Meat">Meat</option>
-                                          <option value="Meatless">Meatless</option>
-                          
-                                           </select><br>
-                                      
-                                      {% elif today == 1 %}
-                                       <select name="term">
-                                          <option value="taco">Taco</option>
-                                          <option value="tequila">Tequila</option>
-                                      </select><br>
-                                      {% elif today == 2 %}
-                                       <select name="term">
-                                          <option value="wine">Wine</option>
-                                          <option value="waffles">Waffles</option>
-                                      </select><br>
-                                      {% elif today == 3 %}
-                                       <select name="term">
-                                          <option value="beer">Thirsty</option>
-                                          <option value="thai">Thai</option>
-                                      </select><br>
-                                      {% elif today == 4 %}
-                                       <select name="term">
-                                          <option value="food_truck">Food Truck</option>
-                                          <option value="fried">Fried</option>
-                                          <option value="flan">Flan</option>
-                                      </select><br>
-                                      {% elif today == 5 %}
-                                       <select name="term" id="term">
-                                          <option name="sweets" value="sweets">Sweets</option>
-                                          <option value="steak">Steak</option>
-                                          <option value="salad">Salad</option>
-                                      </select><br>
-                                      {% elif today == 6 %}
-                                       <select name="term">
-                                          <option value="seafood">Seafood</option>
-                                          <option value="surprise">Surprise</option>
+                            Pick an adventure:
+                            {% if today == 0 %}
+                            <select name="term">
+                              <option value="Meat">Meat</option>
+                              <option value="Meatless">Meatless</option>
+                            </select><br>
+                            
+                            {% elif today == 1 %}
+                            <select name="term">
+                              <option value="taco">Taco</option>
+                              <option value="tequila">Tequila</option>
+                            </select><br>
 
-                                      </select><br>
+                            {% elif today == 2 %}
+                            <select name="term">
+                              <option value="wine">Wine</option>
+                              <option value="waffles">Waffles</option>
+                            </select><br>
 
-                                      {% endif %}
-                                       <!-- location (auto geo?) -->
-                              
-                                    How Far do you want to walk?:
-                                      <select name="distance" id="distance">
-                                          <option value="804">Hop</option>
-                                          <option value="1609">Skip</option>
-                                          <option value="2414">Jump</option>
-                                          <br>
-                                      </select><br>
+                            {% elif today == 3 %}
+                            <select name="term">
+                              <option value="beer">Thirsty</option>
+                              <option value="thai">Thai</option>
+                            </select><br>
+
+                            {% elif today == 4 %}
+                            <select name="term">
+                              <option value="food_truck">Food Truck</option>
+                              <option value="fried">Fried</option>
+                              <option value="flan">Flan</option>
+                            </select><br>
+
+                            {% elif today == 5 %}
+                            <select name="term" id="term">
+                                <option name="sweets" value="sweets">Sweets</option>
+                                <option value="steak">Steak</option>
+                                <option value="salad">Salad</option>
+                            </select><br>
+                            {% elif today == 6 %}
+                             <select name="term">
+                                <option value="seafood">Seafood</option>
+                                <option value="surprise">Surprise</option>
+
+                            </select><br>
+
+                            {% endif %}
+                             <!-- location (auto geo?) -->
+                    
+                          How Far do you want to walk?:
+                            <select name="distance" id="distance">
+                                <option value="804">Hop</option>
+                                <option value="1609">Skip</option>
+                                <option value="2414">Jump</option>
+                                <br>
+                            </select><br>
 
 
 
