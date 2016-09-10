@@ -24,24 +24,32 @@ app.jinja_env.undefined = StrictUndefined
 def index():
 	"""Render homepage plus search field for location."""
 
-	return render_template("homepage.html")
+	# Monday=0, Sunday=6
+	today = datetime.today().weekday()
+
+	return render_template("homepage.html",
+						   today=today)
 
 
 
 @app.route("/process_search", methods=["GET"])
 def search_process():
 	"""Process the search and show results"""
-	
+	print "hi"
 	location = request.args.get('location')
+	radius = request.args.get('distance')
 	term = request.args.get('term')
-	datestring = request.args.get('date')
 
-	print "date", type(datestring)
-	print "location", location
+	print location
+	print radius
+	print term
 
-	yelp_result = yelp_results.get_business_results(location, term)
+	yelp_result = yelp_results.get_business_results(location, term, radius)
 	
-	return render_template("search_results.html", location=location,yelp_result=yelp_result)
+	return render_template("search_results.html",
+						   location=location,
+						   radius=radius,
+						   yelp_result=yelp_result)
 
 
 
