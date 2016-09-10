@@ -7,19 +7,7 @@
 <link rel="stylesheet" type="text/css" href="animate.css">
 
 
-    </head>
-<!-- datepicker widget -->
-<script>
-if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
-    jQuery(function($){ //on document.ready
-        $('#date').datepicker();
-    });
-}
-
-</script>
-
-
-
+</head>
 
 <body class="home">
     <div class="container" style="background-image:url(static/img/bridgebokeh.jpg);background-size:100%; top right no-repeat; background-attachment:fixed; opacity:0.95; filter:Alpha(opacity=80);">
@@ -76,11 +64,16 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
                             <div class="info-parent">
                               <div class="info-holder">
 
-
+                                    <!-- location (auto geo?) -->
                                     <input style="color:black; opacity: 0.7;" type="text" id="location" name="location" required placeholder="Enter a location:"
     oninvalid="this.setCustomValidity('Enter a Destination: City, State or Country. Dream Big!')"
     oninput="setCustomValidity('')">
-                                   
+                                    <!-- term dropdown -->
+                                    <input style="color:black; opacity: 0.7;" type="text" id="term" name="term" required>
+
+                                    <!-- distance dropdown (0.5, 1, 1.5, 2) -->
+                                    <input style="color:black; opacity: 0.7;" type="text" id="distance" name="distance" required>
+                                    
 
                                 <div class="parent-submit">
                                 <div class="submit">
