@@ -10,6 +10,11 @@ token_secret=os.environ['YELP_ACCESS_TOKEN_SECRET']
 
 yelp_api = YelpAPI(consumer_key, consumer_secret, token, token_secret)
 
+<<<<<<< HEAD
+def get_business_results(location, term="beer", radius=800):
+    # create a query with users location, term and limit results to n
+    search_response = yelp_api.search_query(location=location, term="beer", radius_filter=radius, limit=10, sort=1)
+=======
 def get_business_results(location, term, radius):
     """Query Yelp for three results within a radius of location"""
 
@@ -19,6 +24,7 @@ def get_business_results(location, term, radius):
                                             radius_filter=radius,
                                             limit=3)
     
+>>>>>>> 3317501379ad242aee6a90d90aae4cb67b478387
     # contain responses from yelp
     responses = []
 
