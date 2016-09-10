@@ -37,12 +37,14 @@ def search_process():
 	"""Process the search and show results"""
 	
 	location = request.args.get('location')
+	radius = request.args.get('distance')
 	term = request.args.get('term')
 
 	yelp_result = yelp_results.get_business_results(location, term)
 	
 	return render_template("search_results.html",
 						   location=location,
+						   radius=radius,
 						   yelp_result=yelp_result)
 
 
