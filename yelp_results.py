@@ -11,6 +11,7 @@ token_secret=os.environ['YELP_ACCESS_TOKEN_SECRET']
 yelp_api = YelpAPI(consumer_key, consumer_secret, token, token_secret)
 
 
+
 def get_business_results(location, term, radius, offset):
 
 
@@ -24,19 +25,22 @@ def get_business_results(location, term, radius, offset):
     # contain responses from yelp
     responses = []
 
-    # iterate through 'businesses' response from yelp, append each value needed to
+    # iterate through 'businesses' response from yelp, if rating is equal to or greater than 3.5, append each value needed to
     # a key in a dictionary
     for business in search_response['businesses']:
-        responses.append({'name': business['name'],
-                        'location': business['location']['display_address'],
-                        'latitude': business['location']['coordinate']['latitude'],
-                        'longitude': business['location']['coordinate']['longitude'],
-                        'rating': business['rating'],
-                        'review_count': business['review_count'],
-                        'url': business['url'],
-                        'image' : business['image_url'].replace('/ms.jpg', '/l.jpg'),
-                        'id' : business['id'],
-                        'phone': business.get('display_phone')})
+
+        if business['rating'] >= 3.5:
+
+            responses.append({'name': business['name'],
+                            'location': business['location']['display_address'],
+                            'latitude': business['location']['coordinate']['latitude'],
+                            'longitude': business['location']['coordinate']['longitude'],
+                            'rating': business['rating'],
+                            'review_count': business['review_count'],
+                            'url': business['url'],
+                            'image' : business['image_url'].replace('/ms.jpg', '/l.jpg'),
+                            'id' : business['id'],
+                            'phone': business.get('display_phone')})
 
     return responses
 
