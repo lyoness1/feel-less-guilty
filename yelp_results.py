@@ -50,5 +50,5 @@ def return_business_results(location, term, radius):
     responses = first_twenty + second_twenty
 
     pprint.pprint(responses)
-    return responses
+    return responses[:-3]
 
