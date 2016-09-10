@@ -35,7 +35,7 @@ def index():
 @app.route("/process_search", methods=["GET"])
 def search_process():
 	"""Process the search and show results"""
-	print "hi"
+
 	location = request.args.get('location')
 	radius = request.args.get('distance')
 	term = request.args.get('term')
