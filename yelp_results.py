@@ -19,7 +19,7 @@ def get_business_results(location, term, radius, offset):
                                             radius_filter=radius,
                                             limit=20,
                                             offset=20,
-                                            sort=1)
+                                            sort=2)
 
     # contain responses from yelp
     responses = []
@@ -50,5 +50,6 @@ def return_business_results(location, term, radius):
     responses = first_twenty + second_twenty
 
     pprint.pprint(responses)
-    return responses
+    return responses[:-3]
+
 
