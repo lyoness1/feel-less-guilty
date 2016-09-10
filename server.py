@@ -40,10 +40,6 @@ def search_process():
 	radius = request.args.get('distance')
 	term = request.args.get('term')
 
-	print location
-	print radius
-	print term
-
 	yelp_result = yelp_results.get_business_results(location, term, radius)
 	
 	return render_template("search_results.html",
