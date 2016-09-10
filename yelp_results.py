@@ -10,9 +10,9 @@ token_secret=os.environ['YELP_ACCESS_TOKEN_SECRET']
 
 yelp_api = YelpAPI(consumer_key, consumer_secret, token, token_secret)
 
-def get_business_results(location, term="beer"):
+def get_business_results(location, term="beer", radius=800):
     # create a query with users location, term and limit results to n
-    search_response = yelp_api.search_query(location=location, term="beer", limit=15)
+    search_response = yelp_api.search_query(location=location, term="beer", radius_filter=radius, limit=10, sort=1)
     # contain responses from yelp
     responses = []
     # iterate through 'businesses' response from yelp, append each value needed to
