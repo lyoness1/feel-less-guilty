@@ -28,65 +28,31 @@ crossorigin="anonymous"></script>
 <!-- Font Awesome -->
 <script src="https://use.fontawesome.com/8ba551412d.js"></script>
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-<!-- google fonts -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
-<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 
+<link rel="stylesheet" type="text/css" href="animate.css">
 
-<title>Pursuit of Hoppiness</title>
+
+<title>Guiltless</title>
 </head>
 
 <!-- loading animation -->
 <div id="demo-content">
-        <div id="loader-wrapper">
-            <div id="loader"></div>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
 
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
 
         </div>
-
-        <div id="content">
+    </div>
 </div>
-</div>
-
-
-
-
-<body class="style-2" data-color="theme-3">
-     <div class="style-page">
-        <div class="wrappers"> </div>
-            
-            <div class="color-block">
-            </div>
-            <div class="color-block">
-            <div class="check-option active"><span class="rounded"></span></div>
-            <div class="check-option"><span class="norounded"></span></div>
-            </div>
-            <div class="color-block">
-            <div class="header-style"> 
-            </div>  
-            </div>
-            <div class="color-block"> 
-            </div>
-    </div> 
-  
-   
-
 
 
 {% block content %}
 
+<!-- Content goes here -->
 
-{% for flash in get_flashed_messages() %}
-  {{ flash }}
-{% endfor %}
-
-
-    Put your body here.
 {% endblock %}
 
 
