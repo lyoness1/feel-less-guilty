@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <script>
 ///////////// Google Maps in Modals ///////////////////////////////////////////
 
@@ -22,7 +23,7 @@ function implode(){
 }
 setTimeout(implode, 1);
  </script>
-
+<div class="results-bg">
 
 <div class="parent"></div>
 <a href="/"><div class="arrow hvr-grow ">
@@ -72,6 +73,8 @@ setTimeout(implode, 1);
             </div> 
         </div>   
 </div>
+</div>
+</body>
 <script>
 
 initMaps['{{ result.id }}'] = function(){
