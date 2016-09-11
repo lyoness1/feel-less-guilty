@@ -15,14 +15,14 @@ body .results-bg {
 }
 
 input {
- font-family: 'MANIFESTO';
+ font-family: 'Pacifico';
  font-size: 14px;
  line-height: 25px;
  color:black;
 }
 
 a {
-    font-family: 'MANIFESTO';
+    font-family: 'Pacifico';
     font-weight: bold;
     font-size: 15px;
     text-shadow: 1px 1px 1px black;
@@ -33,14 +33,14 @@ a:hover {
 }
 
 p {
-    font-family: 'MANIFESTO';
+    font-family: 'Arimo' !important;
     color: black;
 }
 
 
 .container {
     width: 600px;
-    padding-top: 20em;
+    padding-top: 12em;
     margin: 0 auto;
     text-align: center;
 }
@@ -71,19 +71,20 @@ p {
 }
 
 #main-title {
-    font-family: 'MANIFESTO';
-    font-size: 60px;
+    font-family: 'Pacifico';
+    font-size: 110px;
     font-weight: 900;
     height: 40px;
     text-shadow: 1px 1px 1px black;
     text-align: center;
     margin: 0 auto;
-    letter-spacing: -0.1;
+    letter-spacing: 2px;
+    padding-bottom: 120px;
 }
 
 .tag {
   padding-top: 20px;
-  font-family: 'MANIFESTO';
+  font-family: 'Arimo';
   font-size: 15px;
   font-weight: 900;
   height: 40px;
@@ -187,7 +188,7 @@ p {
     text-align: center;
     font-size: 14px;
     border-radius: 25px;
-    font-family: "MANIFESTO";
+    font-family: "Arimo";
 }
 
 .saveAttractionModalBtn {
@@ -233,10 +234,12 @@ p {
     text-align: center;
     margin: 0 auto;
     text-transform: capitalize;
-    font-family: 'MANIFESTO';
+    font-family: 'Pacifico';
     font-weight: bold;
+    font-size: 100px;
     text-shadow: .5px .5px .5px black;
-    padding-top: 25px;
+    padding-top: 70px;
+    letter-spacing: 5px;
 }
 
 
@@ -244,6 +247,20 @@ p {
     padding-left: 40px;
     margin-top: 45px; 
     /*float: left;*/
+    position: relative;
+    
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4.5s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+}
+
+.nah {
+    padding-left: 40px;
+    margin-top: 45px; 
+    text-align: right;
     position: relative;
     
     -webkit-animation-name: example; /* Chrome, Safari, Opera */
@@ -276,7 +293,8 @@ p {
 .results-header{
  padding: 10px;
  color: black;
- font-family: "MANIFESTO";
+ font-family: "Arimo";
+ font-size: 30px;
 }
 
 
