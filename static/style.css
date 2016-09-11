@@ -1,4 +1,4 @@
-body {
+html .homepage {
   background-image: url('/static/images/homepage_background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,6 +8,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+}
+
+html .results-bg {
+  background-image: url('/static/images/results.png') !important;
 }
 
 input {
@@ -49,9 +53,9 @@ p {
     color: black;
 }
 
-
 #submit-search {
-
+  background-color: white;
+  opacity: 0.7;
 }
 
 #submit-search:hover {
@@ -84,6 +88,10 @@ p {
   height: 40px;
   text-align: center;
   margin: 0 auto;
+}
+
+.parent {
+  padding-top: 50px;
 }
 
 .info-parent {
@@ -221,7 +229,7 @@ p {
     color: white !important;
     font-weight: bold;
     text-shadow: .5px .5px .5px black;
-    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 
