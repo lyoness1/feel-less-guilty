@@ -1,5 +1,13 @@
 body {
-  background-image: url('/static/images/restaurant.png');
+  background-image: url('/static/images/homepage_background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /*background: url(images/bg.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }
 
 input {
@@ -14,7 +22,7 @@ a {
     font-weight: bold;
     font-size: 15px;
     text-shadow: 1px 1px 1px black;
-    color: white;
+  /*  color: white;*/
 }
 a:hover {
   color:white;
@@ -25,13 +33,11 @@ p {
 }
 
 
-
-.parent {
-  width: 100%;
-}
-
-.nav {
-  padding-top: 10px;
+.container {
+    width: 600px;
+    padding-top: 20em;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .modal-info {
@@ -43,21 +49,9 @@ p {
     color: black;
 }
 
-.search {
-    height: 700px !important;
-   /* width: 1170px !important;*/
-}
 
 #submit-search {
-    font-family: 'MANIFESTO';
-    font-size: 13px;
-    text-transform: capitalize;
-    color: maroon;
-    background-color: white;
-    border-radius: 2px;
-    font-weight: bold;
-    border: 2px solid white;
-    margin-left:16px; 
+
 }
 
 #submit-search:hover {
@@ -70,6 +64,7 @@ p {
   background-color: white;
   border: 2px white solid;
 }
+
 #main-title {
     font-family: 'MANIFESTO';
     font-size: 60px;
@@ -77,58 +72,56 @@ p {
     height: 40px;
     text-shadow: 1px 1px 1px black;
     text-align: center;
-    color: white !important;
     margin: 0 auto;
     letter-spacing: -0.1;
 }
-
 
 .tag {
   padding-top: 20px;
   font-family: 'MANIFESTO';
-    font-size: 15px;
-    font-weight: 900;
-    height: 40px;
-    text-shadow: .5px .5px .5px black;
-    text-align: center;
-    color: white !important;
-    margin: 0 auto;
-    letter-spacing: -0.1;
-
-}
-
-
-.vertical-align {
-    padding-bottom: 50px;
-}
-
-.main-title {
-    height:180px;
-    padding-top: 220px;
+  font-size: 15px;
+  font-weight: 900;
+  height: 40px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .info-parent {
-    width: 610px;
+    /*width: 610px;*/
     /*border: 1px solid green;*/
-    height: 200px;
+    height: 300px;
     margin: 0 auto;
 }
 
 .info-holder {
-    width: 300px;
+    width: 700px;
+    display: inline-block;
     padding: 20px;
     margin:0 auto;
-    height: 100px;
     margin-top: 35px;
     font-family: 'MANIFESTO';
     color: black;
     margin: 0 auto;
-    padding-left: 50px;
 }
+
+
+#location, .adventure-box, .walk-box {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  width: 200px;
+  display: inline-block;
+}
+
+
 .submit {
     width: 250px;
     margin: 10px auto;
     font-family: 'MANIFESTO'
+}
+
+#submimt-search {
+  background-color: white;
 }
 
 
@@ -137,19 +130,13 @@ p {
     padding: 50px;
 }
 
-.container {
-    width: 900px;
-    background-image: static;
-}
-
 .logo-img {
     float:right;
     width: 4%;
     margin-right: 2%;
     margin-top: 2%;
     height: 40px;
-
-margin-bottom: 1%;}
+    margin-bottom: 1%;}
 
 /* SEARCH RESULTS PAGE DIVS*/
 
