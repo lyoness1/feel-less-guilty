@@ -16,7 +16,7 @@ body .results-bg {
 
 input {
  font-family: 'Pacifico';
- font-size: 14px;
+ font-size: 20px;
  line-height: 25px;
  color:black;
 }
@@ -83,9 +83,9 @@ p {
 }
 
 .tag {
-  padding-top: 20px;
+  padding: 40px;
   font-family: 'Arimo';
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 900;
   height: 40px;
   text-align: center;
