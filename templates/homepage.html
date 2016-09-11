@@ -26,7 +26,7 @@
 
                 <!-- TERM FOR YELP TO SEARCH -->
                 <div class="adventure-box">
-                <p>Pick an adventure for {{ today }}:</p>
+                <p>{{ today }}'s Adventure:</p>
                 
                 {% if today == 'Monday' %}
                 <select name="term">
@@ -77,7 +77,7 @@
 
                 <!-- DISTANCE TO WALK -->
                 <div class="walk-box">
-                <p>How Far do you want to walk?:</p>
+                <p>Walking Distance:</p>
                 <select name="distance" id="distance">
                   <option value="804">Hop</option>
                   <option value="1609">Skip</option>
