@@ -29,14 +29,14 @@ setTimeout(implode, 1);
 <a href="/"><div class="arrow hvr-grow ">
 <i class="fa fa-angle-double-left" aria-hidden="true" style="font-size: 30px;"><span style="font-family:manifesto; font-size:15px; vertical-align:middle;">  start over</span></i>
 </div> </a>
-<h1 class ="header"> Results for {{location}}: </h1>
+<h1 class ="header"> Take your pick: </h1>
 
 
  {% for result in yelp_result %}
   <div class="attraction-results">
     <div class="yelp-results-btn" id="{{result.id}}">
          <div value="{{result.id}}"> 
-                <h4 class="results-header">{{ result.name }} </h4>   
+                <h4 class="results-header" style="color:black;">{{ result.name }} </h4>   
                   {% for item in result.location %}
                     {{ item }}
                     {% endfor %}
@@ -73,6 +73,8 @@ setTimeout(implode, 1);
             </div> 
         </div>   
 </div>
+
+
 </div>
 </body>
 <script>
