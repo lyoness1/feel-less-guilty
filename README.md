@@ -35,6 +35,7 @@ Users can enter a custom starting address or use their current location, which i
 
 ![Homepage](/static/images/homepage.png)
 
+
 The results page displays three restaurants that match the user's search. A users can learn more about the restaurant by clicking on the magnifying glass, which opens a map showing the business' location with a link to their Yelp page.
 
 
