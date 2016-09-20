@@ -32,9 +32,11 @@ Guiltless was built by five teammates during the one-day [All-Women Hackathon in
 ### <a name="how"></a>How it works
 Users can enter a custom starting address or use their current location, which is auto-filled when the homepage loads. Themed destinations correspond to each day of the week (on Tuesday, users can select Tacos, Tequila, or Tofu) and the user's walking distance is measured by a hop(1/2 mile), skip (1 mile), or a jump (1 1/5 miles).
 
+
 ![Homepage](/static/images/homepage.png)
 
 The results page displays three restaurants that match the user's search. A users can learn more about the restaurant by clicking on the magnifying glass, which opens a map showing the business' location with a link to their Yelp page.
+
 
 ![Search](/static/images/search.png)
 
