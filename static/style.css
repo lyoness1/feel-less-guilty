@@ -259,10 +259,11 @@ p {
 }
 
 .nah {
-    padding-left: 40px;
-    margin-top: 45px; 
+    padding-right: 40px;
+    /*margin-top: 10px;*/ 
     text-align: right;
-    position: relative;
+    padding-top: 10px;
+   /* position: relative;*/
  
 }
 
