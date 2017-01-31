@@ -10,8 +10,8 @@
 
         <!-- <header> -->
 
-        <h1 id="main-title">Guiltless</h1>
-        <p class="tag">Walk, explore... eat &amp; drink tasty treats.</p>
+        <h1 id="main-title">guiltless</h1>
+        <p class="tag">indulge every day of the week, minus guilt. </p>
         <!-- </header> -->
 
         <div class="row">
@@ -21,70 +21,103 @@
             <form action="/process_search" method="GET">
               
                 <!-- LOCATION -->
-                <input style="color:black; opacity: 0.7;" type="text" id="location" name="location" required placeholder="Enter a location:"></br>
+                <input style="opacity: 0.7;" type="text" id="location" name="location" required placeholder="Enter a location:"></br>
                 
 
                 <!-- TERM FOR YELP TO SEARCH -->
-                <div class="adventure-box">
-                <p>{{ today }}'s Adventure:</p>
-                
+                <div class="adventure-box">                
                 {% if today == 'Monday' %}
+                <div class="styled-select blue semi-square">
                 <select name="term">
-                  <option value="meat">Meat</option>
-                  <option value="meatless">Meatless</option>
+                  <option value="" disabled selected>Select {{ today }}'s guilt</option>
+                  <option value="mahi">Mahi Mahi</option>
+                  <option value="miso">Miso</option>
+                  <option value="mango">Mango</option>
+                  <option value="macaroni">Macaroni and Cheese</option>
                   <option value="martini">Martini</option>
-                </select><br>
+                  <option value="margarita">Margarita</option>
+                </select></div><br>
                 {% elif today == 'Tuesday' %}
+                <div class="styled-select blue semi-square">
                 <select name="term">
+                   <option value="" disabled selected>Select your guilt</option>
                   <option value="taco">Taco</option>
                   <option value="tequila">Tequila</option>
                   <option value="vegan">Tofu</option>
-                </select><br>
+                  <option value="tea">Tea</option>
+                  <option value="tomato">Tomato</option>
+                   <option value="turkey">Turkey</option>
+                    <option value="tomato">Tomato</option>
+                </select></div><br>
                 {% elif today == 'Wednesday' %}
+                <div class="styled-select blue semi-square">
                 <select name="term">
+                   <option value="" disabled selected>Select your guilt</option>
                   <option value="wine">Wine</option>
                   <option value="waffles">Waffles</option>
-                  <option value="food">Whatever</option>
-                </select><br>
+                  <option value="wheat">Wheat</option>
+                  <option value="wheatgrass">Wheatgrass</option>
+                  <option value="white russian">White Russian</option>
+                  <option value="food">Wild Card</option>
+                </select></div><br>
                 {% elif today == 'Thursday' %}
                 <select name="term">
+                   <option value="" disabled selected>Select your guilt</option>
                   <option value="beer">Thirsty</option>
                   <option value="thai">Thai</option>
-                  <option value="tomato">Tomato</option>
+                  <option value="tater">Tater Tots</option>
+                  <option value="toast">Toast</option>
+                  <option value="tart">Tart</option>
                 </select><br>
                 {% elif today == 'Friday' %}
+                <div class="styled-select blue semi-square">
                 <select name="term">
+                   <option value="" disabled selected>Select your guilt</option>
                   <option value="food_truck">Food Truck</option>
                   <option value="fried">Fried</option>
                   <option value="flan">Flan</option>
+                  <option value="fig">Fig</option>
+                  <option value="fig">Fish</option>
+                  <option value="fig">Fish</option>
                   <option value="fancy">Fancy</option>
-                </select><br>
+                </select></div><br>
 
                 {% elif today == 'Saturday' %}
+                <div class="styled-select blue semi-square">
                 <select name="term" id="term">
+                   <option value="" disabled selected>Select your guilt</option>
                   <option name="deserts" value="sweets">Sweets</option>
                   <option value="steak">Steak</option>
                   <option value="salad">Salad</option>
-                  <option value="sushi">Sushi/Sake</option>
-                </select><br>
+                  <option value="sushi">Sushi</option>
+                  <option value="sangria">Sangria</option>
+                  <option value="sandwhich">Sandwhich</option>
+                </select><div><br>
 
                 {% elif today == 'Sunday' %}
+                <div class="styled-select blue semi-square">
                 <select name="term">
-                  <option value="seafood">Seafood</option>
-                  <option value="surprise">Surprise</option>
+                   <option value="" disabled selected>Select your guilt</option>
+                
                   <option value="brunch">Scramble</option>
-                </select><br>
+                  <option value="seafood">Seafood</option>
+                  <option value="spaghetti">Spaghetti</option>
+                  <option value="sausage">Sausage</option>
+                  <option value="soup">Soup</option>
+                  <option value="surprise">Surprise</option>
+                </select></div><br>
                 {% endif %}
               </div>
 
                 <!-- DISTANCE TO WALK -->
                 <div class="walk-box">
-                <p>Walking Distance:</p>
+                <div class="styled-select blue semi-square">
                 <select name="distance" id="distance">
+                   <option value="" disabled selected>Burn off the guilt by walking..</option>
                   <option value="804">Hop</option>
                   <option value="1609">Skip</option>
                   <option value="2414">Jump</option>
-                </select><br>
+                </select></div><br>
               </div>
 
                 <!-- SUBMIT BUTTON -->

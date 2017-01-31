@@ -1,5 +1,5 @@
 body {
-  background-image: url('/static/images/homepage_background.png') !important;
+  background-image: url('/static/images/food.jpg') !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -11,7 +11,7 @@ body {
 }
 
 body .results-bg {
-  background-image: url('/static/images/results.png') !important;
+  background-color: white;
 }
 
 input {
@@ -35,12 +35,13 @@ a:hover {
 p {
     font-family: 'Arimo' !important;
     color: black;
+    font-size: 15px;
 }
 
 
 .container {
     width: 600px;
-    padding-top: 12em;
+    padding-top: 6em;
     margin: 0 auto;
     text-align: center;
 }
@@ -58,12 +59,6 @@ p {
   background-color: white;
   opacity: 0.7;
 }
-
-#submit-search:hover {
-  background-color: white;
-  opacity: 0.7;
-}
-
 
 #location:hover {
   background-color: white;
@@ -85,11 +80,12 @@ p {
 .tag {
   padding: 40px;
   font-family: 'Arimo';
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
   height: 40px;
   text-align: center;
   margin: 0 auto;
+  color: black;
 }
 
 .parent {
@@ -118,18 +114,19 @@ p {
   margin: 0 auto;
   text-align: center;
   width: 300px;
+  margin-bottom: 20px;
   display: inline-block;
-  border: 2px black solid;
+  border-radius: 5px;
+  border: 2px solid #3b8ec2;
 }
 
 .adventure-box, .walk-box {
   margin: 0 auto;
   text-align: center;
-  padding: 20px 20px 20px 20px;
-  padding-top: 30px;
-  width: 250px;
+  padding-top: 10px;
+  width: 450px;
   display: inline-block;
-
+  color: black;
 }
 
 
@@ -139,8 +136,12 @@ p {
     font-family: 'Arimo';
 }
 
-#submimt-search {
-  background-color: white;
+#submit-search {
+  background-color: #3b8ec2;
+  border-radius: 5px;
+  opacity: 0.9;
+  color: white;
+   font-family: 'Arimo';
 }
 
 
@@ -157,34 +158,40 @@ p {
     height: 40px;
     margin-bottom: 1%;}
 
+.yelp-results-btn {
+  margin: 10px;
+}
+
+.modal-body {
+  max-height: 500px;
+  overflow: hidden;
+}
+
 /* SEARCH RESULTS PAGE DIVS*/
 
 .new {
-  padding: 0;
-  padding-bottom: 250px;
-  margin: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  justify-content: space-around;
+      padding: 0;
+      overflow: scroll;
+    padding-bottom: 150px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-content: center;
 }
 
 .attraction-results {
     background-image: url('/static/images/stardust.png');
     border: white 1px solid;
-    width: 370px;
-    height: 350px;
+    width: 350px;
+    height: 320px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    padding-bottom: 20px;
+    /*padding: 0 10px 20px 0;*/
     margin-top: 30px;
     text-align: center;
     font-size: 14px;
@@ -202,8 +209,8 @@ p {
 
 
 .yelp-result-img {
-    height: 20em;
-    width: 20em;
+    width: 15em;
+    max-height: 15em;
     border: 1px solid #00628B;
     border-radius: 10px;
     margin: 2px;
@@ -237,7 +244,7 @@ p {
     text-transform: capitalize;
     font-family: 'Pacifico';
     font-weight: bold;
-    font-size: 100px;
+    font-size: 50px;
     text-shadow: .5px .5px .5px black;
     padding-top: 10px;
     letter-spacing: 5px;
@@ -245,8 +252,8 @@ p {
 
 
 .arrow {
-    padding-left: 40px;
-    margin-top: 45px; 
+    /*padding-left: 40px;*/
+    margin-top: 15px; 
     /*float: left;*/
     position: relative;
     
@@ -290,7 +297,7 @@ p {
  padding: 10px;
  color: black;
  font-family: "Arimo";
- font-size: 30px;
+ font-size: 20px;
 }
 
 
@@ -413,14 +420,6 @@ p {
 }
 
 
-
-/*LOADER*/
-
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
@@ -433,8 +432,8 @@ p {
    ========================================================================== */
 p {
     line-height: 1.33em;
-    color: #7E7E7E;
-}
+/*    color: #7E7E7E;
+*/}
 h1 {
     color: #EEEEEE;
 }
@@ -457,7 +456,7 @@ h1 {
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: grey;
+    border-top-color: lightgrey;
 
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -474,7 +473,7 @@ h1 {
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: darkgrey;
+        border-top-color: white;
 
         -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -489,7 +488,7 @@ h1 {
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color:grey;
+        border-top-color:lightgrey;
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
           animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -525,7 +524,7 @@ h1 {
         top: 0;
         width: 51%;
         height: 100%;
-        background-color:#691c39;
+        background-color:#3b8ec2;
         z-index: 1000;
         -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: translateX(0);  /* IE 9 */
@@ -722,4 +721,126 @@ h1 {
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+/* -------------------- Page Styles (not required) */
+div { margin: 20px; }
+
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   margin: 0 auto;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate   { background-color: #ddd; }
+.green   { background-color: #779126; }
+.blue    { background-color: #3b8ec2; }
+.yellow  { background-color: #eec111; }
+.black   { background-color: #000; }
+
+/* -------------------- Colors: Text */
+.slate select   { color: #000; }
+.green select   { color: #fff; }
+.blue select    { color: #fff; }
+.yellow select  { color: #000; }
+.black select   { color: #fff; }
+
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+   border: 0;
+   color: #EEE;
+   background: transparent;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 2px 10px;
+   width: 378px;
+   *width: 350px;
+   *background: #58B14C;
+   -webkit-appearance: none;
+}
+
+#mainselection {
+   overflow:hidden;
+   width:350px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+   background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 20px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
+
+select#soflow-color {
+   color: #fff;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+   background-color: #779126;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   padding-left: 15px;
 }
