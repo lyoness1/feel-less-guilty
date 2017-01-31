@@ -21,5 +21,4 @@ def geocode_location(location):
         return city, origin_lat, origin_lng
 
     else:
-        pass
-        # Add error message
+        console.log('this is what is failing)
