@@ -152,9 +152,9 @@ function successFunction(position) {
     // codeLatLng(lat, lng);
 }
 
-function errorFunction(){
-    alert("Geocoder failed");
-}
+// function errorFunction(){
+//     alert("Geocoder failed");
+// }
 
 
 // function codeLatLng(lat, lng) {
