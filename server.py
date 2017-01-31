@@ -3,6 +3,7 @@ from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, flash, redirect, session, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
 from datetime import datetime, time
+
 from yelpapi import YelpAPI 
 from pprint import pprint
 import os 
@@ -26,6 +27,9 @@ def index():
 
 	# capitalized day of the week in plain English
 	today = datetime.today().strftime('%A')
+	# today1 = datetime.today().strftime('%A')
+	# today = today1.replace(tzinfo=timezone.utc)
+
 
 	return render_template("homepage.html",
 						   today=today)
