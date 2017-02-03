@@ -47,38 +47,37 @@
                   <option value="tea">Tea</option>
                   <option value="tomato">Tomato</option>
                    <option value="turkey">Turkey</option>
-                    <option value="tomato">Tomato</option>
                 </select></div><br>
                 {% elif today == 'Wednesday' %}
                 <div class="styled-select blue semi-square">
                 <select name="term">
                    <option value="" disabled selected>Select {{ today }}'s indulgance</option>
-                  <option value="wine">Wine</option>
+                  <option value="wine_bar">Wine</option>
                   <option value="waffles">Waffles</option>
-                  <option value="wheat">Wheat</option>
+                  <option value="whole_wheat">Whole Wheat</option>
                   <option value="wheatgrass">Wheatgrass</option>
-                  <option value="white russian">White Russian</option>
+                  <option value="white_russian">White Russian</option>
                   <option value="food">Wild Card</option>
                 </select></div><br>
                 {% elif today == 'Thursday' %}
+                 <div class="styled-select blue semi-square">
                 <select name="term">
                    <option value="" disabled selected>Select {{ today }}'s indulgance</option>
                   <option value="beer">Thirsty</option>
                   <option value="thai">Thai</option>
                   <option value="tater">Tater Tots</option>
-                  <option value="toast">Toast</option>
-                  <option value="tart">Tart</option>
-                </select><br>
+                   <option value="toast">Toast</option>
+                   <option value="tapas">Tapas</option>
+                </select></div><br>
                 {% elif today == 'Friday' %}
                 <div class="styled-select blue semi-square">
                 <select name="term">
                    <option value="" disabled selected>Select {{ today }}'s indulgance</option>
                   <option value="food_truck">Food Truck</option>
-                  <option value="fried">Fried</option>
+                  <option value="french_fries">Frech Fries</option>
                   <option value="flan">Flan</option>
                   <option value="fig">Fig</option>
-                  <option value="fig">Fish</option>
-                  <option value="fig">Fish</option>
+                  <option value="fish_tacos">Fish Tacos</option>
                   <option value="fancy">Fancy</option>
                 </select></div><br>
 
@@ -113,10 +112,10 @@
                 <div class="walk-box">
                 <div class="styled-select blue semi-square">
                 <select name="distance" id="distance">
-                   <option value="" disabled selected>Burn off the guilt by walking..</option>
-                  <option value="804">Hop</option>
-                  <option value="1609">Skip</option>
-                  <option value="2414">Jump</option>
+                   <option value="" disabled selected>Burn off the guilt by walking a..</option>
+                  <option value="804">Hop (1/2 mile)</option>
+                  <option value="1609">Skip (1 mile)</option>
+                  <option value="2414">Jump (1 1/2 miles)</option>
                 </select></div><br>
               </div>
 
@@ -134,15 +133,14 @@
     </div> <!-- vertical align -->
   </div> <!-- search -->
 </div> <!-- container -->
-
+<!-- Geolocation -->
 <script type="text/javascript">
-
 $.get("https://ipinfo.io", function (response) {
-    $("#ip").html("IP: " + response.ip);
-    $("#address").html("Location: " + response.city + ", " + response.region);
-    $("#details").html(JSON.stringify(response, null, 4));
-    $("#city").html(response.city);
-    document.getElementById('location').value = response.city;
+$("#ip").html("IP: " + response.ip);
+$("#address").html("Location: " + response.city + ", " + response.region);
+$("#details").html(JSON.stringify(response, null, 4));
+$("#city").html(response.city);
+document.getElementById('location').value = response.city;
 }, "jsonp");
 </script>
 </html>
